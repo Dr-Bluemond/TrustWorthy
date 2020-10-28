@@ -8,41 +8,54 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject var userData: OBS
     @State private var textIn: String = ""
     @State private var textOut: String = ""
-    func clone() {
-        textOut = dealWithInput(textIn)
+
+    func enter() {
+        self.textOut = analyse(text: self.textIn, pubKeyId: userData.data.selected)
+        userData.makeYouRefresh.toggle()
     }
     var body: some View {
+        
         VStack {
             VStack(alignment: .center) {
-                Text("Input")
-                    .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+                Text("Input:")
+                    .padding([.top, .leading, .trailing])
+                    .font(.headline)
                 TextEditor(text: $textIn)
-                    .padding(.all)
                     .border(Color.gray, width: 1)
+                    .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing]/*@END_MENU_TOKEN@*/)
+                    .shadow(radius: 2)
                 HStack {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
+                    Button(action: {self.textIn = ""}) {
+                        Text("Clear")
+                    }
+                    Button(action: {
+                        self.textIn = UIPasteboard.general.string ?? self.textIn
+                    }){
                         Text("Paste")
                     }
-                    Button(action: self.clone) {
+                    Button(action: self.enter) {
                         Text("Enter")
                     }
                 }
             }
             Divider()
+            Text("Selected Public Key: \(userData.data.selectedLabel ?? "not selected")")
+            Divider()
             VStack(alignment: .center) {
-                Text("Output")
-
+                Text("Output:")
+                    .font(.headline)
                 TextEditor(text: $textOut)
-                    .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
                     .border(Color.gray, width: 1)
+                    .padding([.leading, .trailing])
+                    .shadow(radius: 2)
                 HStack {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
+                    Button(action: {
+                        UIPasteboard.general.string = textOut
+                    }){
                         Text("Copy")
-                    }
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
-                        Text("Paste")
                     }
                 }.padding(.bottom)
             }
@@ -53,6 +66,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView().environmentObject(OBS())
     }
 }

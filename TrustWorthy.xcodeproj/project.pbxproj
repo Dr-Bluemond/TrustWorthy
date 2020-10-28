@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B51A57902546C7610044B4F1 /* OBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A578F2546C7610044B4F1 /* OBS.swift */; };
+		B52865292547A10C004A49DE /* TextAnalyse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52865282547A10C004A49DE /* TextAnalyse.swift */; };
 		B54B03972542C9320000E92A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B03962542C9320000E92A /* Data.swift */; };
 		B54B039F2542CA770000E92A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B039E2542CA770000E92A /* Keys.swift */; };
 		B55F0A8B254111B00091D8FA /* PrivateKeyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F0A8A254111B00091D8FA /* PrivateKeyRow.swift */; };
 		B57643AA254064F40081BE08 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57643A9254064F40081BE08 /* MainView.swift */; };
 		B57643AF254065F00081BE08 /* KeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57643AE254065F00081BE08 /* KeysView.swift */; };
 		B5AF584825443D9700661AEE /* PublicKeyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF584725443D9700661AEE /* PublicKeyRow.swift */; };
-		B5C9B9D9254010F400B9B080 /* Dealing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9B9D8254010F400B9B080 /* Dealing.swift */; };
 		B5C9B9FC25401B6500B9B080 /* CryptorECC in Frameworks */ = {isa = PBXBuildFile; productRef = B5C9B9FB25401B6500B9B080 /* CryptorECC */; };
 		B5FD6A08253D863300EF920B /* TrustWorthyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD6A07253D863300EF920B /* TrustWorthyApp.swift */; };
 		B5FD6A0A253D863300EF920B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD6A09253D863300EF920B /* ContentView.swift */; };
@@ -21,6 +22,7 @@
 		B5FD6A0F253D863400EF920B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5FD6A0E253D863400EF920B /* Preview Assets.xcassets */; };
 		B5FD6A1A253D863400EF920B /* TrustWorthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD6A19253D863400EF920B /* TrustWorthyTests.swift */; };
 		B5FD6A25253D863400EF920B /* TrustWorthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD6A24253D863400EF920B /* TrustWorthyUITests.swift */; };
+		B5FF436125451E270076CC34 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF436025451E270076CC34 /* UserData.swift */; };
 		C69250010F00838C7751E048 /* Pods_TrustWorthy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7CE341C879190BD0AC713D /* Pods_TrustWorthy.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,14 +47,15 @@
 		0D7CE341C879190BD0AC713D /* Pods_TrustWorthy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrustWorthy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1076D274434F7FDBAE6537B0 /* Pods-TrustWorthy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustWorthy.release.xcconfig"; path = "Target Support Files/Pods-TrustWorthy/Pods-TrustWorthy.release.xcconfig"; sourceTree = "<group>"; };
 		521E85BC62680D0D4EBF8CE1 /* Pods-TrustWorthy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustWorthy.debug.xcconfig"; path = "Target Support Files/Pods-TrustWorthy/Pods-TrustWorthy.debug.xcconfig"; sourceTree = "<group>"; };
+		B51A578F2546C7610044B4F1 /* OBS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBS.swift; sourceTree = "<group>"; };
+		B52865282547A10C004A49DE /* TextAnalyse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnalyse.swift; sourceTree = "<group>"; };
+		B528652D2547D35F004A49DE /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B54B03962542C9320000E92A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		B54B039E2542CA770000E92A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		B55F0A8A254111B00091D8FA /* PrivateKeyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKeyRow.swift; sourceTree = "<group>"; };
 		B57643A9254064F40081BE08 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B57643AE254065F00081BE08 /* KeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysView.swift; sourceTree = "<group>"; };
 		B5AF584725443D9700661AEE /* PublicKeyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKeyRow.swift; sourceTree = "<group>"; };
-		B5C9B9D4254005BF00B9B080 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		B5C9B9D8254010F400B9B080 /* Dealing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealing.swift; sourceTree = "<group>"; };
 		B5FD6A04253D863300EF920B /* TrustWorthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrustWorthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FD6A07253D863300EF920B /* TrustWorthyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustWorthyApp.swift; sourceTree = "<group>"; };
 		B5FD6A09253D863300EF920B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		B5FD6A20253D863400EF920B /* TrustWorthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrustWorthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FD6A24253D863400EF920B /* TrustWorthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustWorthyUITests.swift; sourceTree = "<group>"; };
 		B5FD6A26253D863400EF920B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5FF436025451E270076CC34 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,9 @@
 			children = (
 				B54B03962542C9320000E92A /* Data.swift */,
 				B54B039E2542CA770000E92A /* Keys.swift */,
+				B5FF436025451E270076CC34 /* UserData.swift */,
+				B51A578F2546C7610044B4F1 /* OBS.swift */,
+				B52865282547A10C004A49DE /* TextAnalyse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,13 +157,12 @@
 				B5FD6A09253D863300EF920B /* ContentView.swift */,
 				B57643AE254065F00081BE08 /* KeysView.swift */,
 				B55F0A8A254111B00091D8FA /* PrivateKeyRow.swift */,
+				B5AF584725443D9700661AEE /* PublicKeyRow.swift */,
 				B57643A9254064F40081BE08 /* MainView.swift */,
 				B5FD6A0B253D863400EF920B /* Assets.xcassets */,
 				B5FD6A10253D863400EF920B /* Info.plist */,
 				B5FD6A0D253D863400EF920B /* Preview Content */,
-				B5C9B9D4254005BF00B9B080 /* MyPlayground.playground */,
-				B5C9B9D8254010F400B9B080 /* Dealing.swift */,
-				B5AF584725443D9700661AEE /* PublicKeyRow.swift */,
+				B528652D2547D35F004A49DE /* MyPlayground.playground */,
 			);
 			path = TrustWorthy;
 			sourceTree = "<group>";
@@ -198,7 +204,6 @@
 				B5FD6A00253D863300EF920B /* Sources */,
 				B5FD6A01253D863300EF920B /* Frameworks */,
 				B5FD6A02253D863300EF920B /* Resources */,
-				518D625DAA675DEC595ED1CF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,23 +325,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		518D625DAA675DEC595ED1CF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrustWorthy/Pods-TrustWorthy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrustWorthy/Pods-TrustWorthy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrustWorthy/Pods-TrustWorthy-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9B1547E65CA62456614C789C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,8 +360,10 @@
 				B5FD6A0A253D863300EF920B /* ContentView.swift in Sources */,
 				B57643AA254064F40081BE08 /* MainView.swift in Sources */,
 				B55F0A8B254111B00091D8FA /* PrivateKeyRow.swift in Sources */,
+				B52865292547A10C004A49DE /* TextAnalyse.swift in Sources */,
 				B57643AF254065F00081BE08 /* KeysView.swift in Sources */,
-				B5C9B9D9254010F400B9B080 /* Dealing.swift in Sources */,
+				B5FF436125451E270076CC34 /* UserData.swift in Sources */,
+				B51A57902546C7610044B4F1 /* OBS.swift in Sources */,
 				B5FD6A08253D863300EF920B /* TrustWorthyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

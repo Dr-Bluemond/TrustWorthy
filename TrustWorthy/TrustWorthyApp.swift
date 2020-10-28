@@ -11,7 +11,7 @@ import SwiftUI
 struct TrustWorthyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(OBS())
         }
     }
 }

@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct PublicKeyRow: View {
+    @EnvironmentObject var userData: OBS
     @State var asPresented : Bool = false
-    var label :String
-    var key:String
+    var id: Int
+    var label: String
+    var key: String
     var body: some View {
         Button(action: {self.asPresented = true}, label: {
             /*@START_MENU_TOKEN@*/HStack {
@@ -27,8 +29,23 @@ struct PublicKeyRow: View {
             ActionSheet(title: Text("PublicKey"), message:
                 Text("Label: " + label), buttons: [
                     Alert.Button.cancel(),
-                    Alert.Button.destructive(Text("Delete"))
-                ]
+                    Alert.Button.default(Text("Select")){
+                        userData.data.selected = self.id
+                        userData.data.selectedLabel = self.label
+                        UserData.saveJson()
+                        userData.makeYouRefresh.toggle()
+                    },
+                    Alert.Button.destructive(Text("Delete")){
+                        UserData.removePublicKey(id: self.id)
+                        if userData.data.selected == self.id {
+                            userData.data.selected = nil
+                            userData.data.selectedLabel = nil
+                            UserData.saveJson()
+                            
+                        }
+                        userData.makeYouRefresh.toggle()
+                    }
+        w        ]
             )
         })
     }
@@ -36,6 +53,6 @@ struct PublicKeyRow: View {
 
 struct PublicKeyRow_Previews: PreviewProvider {
     static var previews: some View {
-        PublicKeyRow(label: "张亮", key: "asd")
+        PublicKeyRow(id: 1, label: "张亮", key: "asd")
     }
 }
