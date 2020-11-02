@@ -119,8 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				B54B03962542C9320000E92A /* Data.swift */,
-				B54B039E2542CA770000E92A /* Keys.swift */,
 				B5FF436025451E270076CC34 /* UserData.swift */,
+				B54B039E2542CA770000E92A /* Keys.swift */,
 				B51A578F2546C7610044B4F1 /* OBS.swift */,
 				B52865282547A10C004A49DE /* TextAnalyse.swift */,
 			);
@@ -155,10 +155,10 @@
 				B54B03952542C91A0000E92A /* Models */,
 				B5FD6A07253D863300EF920B /* TrustWorthyApp.swift */,
 				B5FD6A09253D863300EF920B /* ContentView.swift */,
+				B57643A9254064F40081BE08 /* MainView.swift */,
 				B57643AE254065F00081BE08 /* KeysView.swift */,
 				B55F0A8A254111B00091D8FA /* PrivateKeyRow.swift */,
 				B5AF584725443D9700661AEE /* PublicKeyRow.swift */,
-				B57643A9254064F40081BE08 /* MainView.swift */,
 				B5FD6A0B253D863400EF920B /* Assets.xcassets */,
 				B5FD6A10253D863400EF920B /* Info.plist */,
 				B5FD6A0D253D863400EF920B /* Preview Content */,

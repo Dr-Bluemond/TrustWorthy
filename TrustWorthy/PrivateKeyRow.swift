@@ -10,12 +10,13 @@ import SwiftUI
 struct PrivateKeyRow: View {
     @EnvironmentObject var userData: OBS
     @State var asPresented : Bool = false
+    @State var sureToDelete: Bool = false
     var id: Int
     var label: String
     var publicKey: String
     var body: some View {
         Button(action: {self.asPresented = true}, label: {
-            /*@START_MENU_TOKEN@*/HStack {
+            HStack {
                 Text("[")
                 Text(label)
                     .frame(width: 100.0)
@@ -23,8 +24,8 @@ struct PrivateKeyRow: View {
                 Text("]")
                 Text(publicKey)
                     .lineLimit(1)
-            }/*@END_MENU_TOKEN@*/
-        })
+            }
+                    })
         .actionSheet(isPresented: $asPresented, content: {
             ActionSheet(title: Text("PrivateKey"), message:
                 Text("Label: " + label), buttons: [
@@ -40,18 +41,26 @@ struct PrivateKeyRow: View {
                         }
                     },
                     Alert.Button.destructive(Text("Delete")){
-                        UserData.removePrivateKey(id: self.id)
-                        userData.makeYouRefresh.toggle()
-                        
+                        self.sureToDelete = true
                     }
+                    
                 ]
             )
         })
+        
+
+        .alert(isPresented: $sureToDelete, content: {
+            Alert(title: Text("Sure to delete?"), message: Text("You may not able to decrypt messages encrypted by this key pair"), primaryButton: Alert.Button.cancel(), secondaryButton: Alert.Button.destructive(Text("Delete")){
+                    UserData.removePrivateKey(id: self.id)
+                    userData.makeYouRefresh.toggle()
+            })
+        })
+
     }
 }
 
 struct PrivateKeyRow_Previews: PreviewProvider {
     static var previews: some View {
-        PrivateKeyRow(id: 1, label: "张亮", publicKey: "agjghjghjghjghjghghjgjhghjgjghgjhgjsdf")
+        PrivateKeyRow(id: 1, label: "张亮", publicKey: "publicxxxxxxxx")
     }
 }

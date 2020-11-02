@@ -10,6 +10,7 @@ import SwiftUI
 struct PublicKeyRow: View {
     @EnvironmentObject var userData: OBS
     @State var asPresented : Bool = false
+    @State var sureToDelete : Bool = false
     var id: Int
     var label: String
     var key: String
@@ -36,17 +37,22 @@ struct PublicKeyRow: View {
                         userData.makeYouRefresh.toggle()
                     },
                     Alert.Button.destructive(Text("Delete")){
-                        UserData.removePublicKey(id: self.id)
-                        if userData.data.selected == self.id {
-                            userData.data.selected = nil
-                            userData.data.selectedLabel = nil
-                            UserData.saveJson()
-                            
-                        }
-                        userData.makeYouRefresh.toggle()
+                        self.sureToDelete.toggle()
                     }
-        w        ]
+                ]
             )
+        })
+        .alert(isPresented: $sureToDelete, content: {
+            Alert(title: Text("Sure to delete?"), primaryButton: Alert.Button.cancel(), secondaryButton: Alert.Button.destructive(Text("Delete")){
+                UserData.removePublicKey(id: self.id)
+                if userData.data.selected == self.id {
+                    userData.data.selected = nil
+                    userData.data.selectedLabel = nil
+                    UserData.saveJson()
+                    
+                }
+                userData.makeYouRefresh.toggle()
+            })
         })
     }
 }
